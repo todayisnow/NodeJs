@@ -1,0 +1,4 @@
+// to install bootstart inside cliet and other UI stuff using bower 
+{
+  "directory": "client/bower_components"
+}

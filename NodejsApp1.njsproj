@@ -19,6 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".bowerrc" />
+    <Content Include="client\app\app.component.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="client\app\components\tasks\tasks.component.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="client\package.json" />
     <Content Include="client\styles.css" />
     <Content Include="client\tsconfig.json" />
@@ -27,6 +34,10 @@
     <Content Include="Views\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client\app\services\task.service.js">
+      <SubType>Code</SubType>
+      <TestFramework>ExportRunner</TestFramework>
+    </Compile>
     <Compile Include="client\systemjs.config.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\tasks.js" />
@@ -35,6 +46,9 @@
   <ItemGroup>
     <Folder Include="client\" />
     <Folder Include="client\app\" />
+    <Folder Include="client\app\components\" />
+    <Folder Include="client\app\components\tasks\" />
+    <Folder Include="client\app\services\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\node\" />
@@ -44,7 +58,19 @@
   <ItemGroup>
     <TypeScriptCompile Include="client\app\app.component.ts" />
     <TypeScriptCompile Include="client\app\app.module.ts" />
+    <TypeScriptCompile Include="client\app\components\tasks\tasks.component.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Mocha</TestFramework>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="client\app\main.ts" />
+    <TypeScriptCompile Include="client\app\services\task.service.ts">
+      <SubType>Code</SubType>
+      <TestFramework>ExportRunner</TestFramework>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="client\Task.ts">
+      <SubType>Code</SubType>
+      <TestFramework>ExportRunner</TestFramework>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
