@@ -31,7 +31,7 @@ app.use("/", index);
 app.use("/api", tasks);
 
 //listten
-var port = 1337;
+var port = 3000;
 //func is a call back to be called after connect
 app.listen(port,function()
 {
